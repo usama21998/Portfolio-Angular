@@ -1,0 +1,367 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="100" id="navbar-top">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" [routerLink]="['/home']" placement="bottom" tooltip="Designed and Coded by Creative Tim">
+        <span> PORTFOLIO </span>
+      </a>
+      <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler"
+        [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navigation" type="button">
+        <span class="navbar-toggler-bar bar1"> </span>
+        <span class="navbar-toggler-bar bar2"> </span>
+        <span class="navbar-toggler-bar bar3"> </span>
+      </button>
+    </div>
+    <div class="navbar-collapse justify-content-end" [collapse]="isCollapsed" id="navigation">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand"><a> PORTFOLIO </a></div>
+          <div class="col-6 collapse-close text-right">
+            <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler"
+              [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navigation" type="button">
+              <i class="tim-icons icon-simple-remove"> </i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav">
+
+        <li class="nav-item p-0">
+          <a class="nav-link" href="https://www.youtube.com/@usama21998" placement="bottom" target="_blank"
+            tooltip="Subscribe me on Youtube">
+            <i class="fab fab fab fa-youtube-square"> </i>
+            <p class="d-lg-none d-xl-none">Youtube</p>
+          </a>
+        </li>
+        <li class="nav-item p-0">
+          <a class="nav-link" href="https://www.linkedin.com/in/usama-attique-8a9770219/" placement="bottom"
+            target="_blank" tooltip="Connect with me on Linkedin">
+            <i class="fab fa-linkedin"> </i>
+            <p class="d-lg-none d-xl-none">Linkedin</p>
+          </a>
+        </li>
+        <li class="nav-item p-0">
+          <a class="nav-link" href="mailto:usama21998@gmail.com" placement="bottom" target="_blank"
+            tooltip="Send me an Email">
+            <i class="fab fa fa-envelope"> </i>
+            <p class="d-lg-none d-xl-none">Email</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']"> Back </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+
+  <!-- ........................................................ABOUT MYSELF................................... -->
+  <div class="page-header">
+    <img class="dots" src="assets/img/dots.png" />
+    <img class="path" src="assets/img/path4.png" />
+    <div class="container align-items-center">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <h1 class="profile-title text-left">About Myself</h1>
+          <h5 class="text-on-back">01</h5>
+          <p class="profile-description">
+            Experienced Angular Developer with a demonstrated history of working in the information technology and
+            services industry. Skilled in Angular, Typescript, Javascript, HTML, CSS, Express, Nodejs and MongoDB.
+            Strong engineering professional with a degree of Bachelor in Computer Science from
+            <a href="https://www.iiu.edu.pk/" target="_blank">International Islamic University, Islamabad.</a>
+          </p>
+          <div class="btn-wrapper profile pt-3">
+            <a class="btn btn-icon btn-youtube btn-round mr-1" href="https://www.youtube.com/@usama21998"
+              target="_blank">
+              <i class="fab fa-youtube"> </i>
+            </a>
+            <a class="btn btn-icon btn-facebook btn-round mr-1"
+              href="https://www.linkedin.com/in/usama-attique-8a9770219/" target="_blank">
+              <i class="fab fa-linkedin"> </i>
+            </a>
+            <a class="btn btn-icon btn-dribbble btn-round" href="mailto:usama21998@gmail.com" target="_blank">
+              <i class="fab far fa-envelope"> </i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+          <div class="card card-coin card-plain">
+            <div class="card-header">
+              <img class="img-center img-fluid rounded-circle" src="assets/img/usama.png" />
+
+              <h4 class="title">Usama Attique</h4>
+            </div>
+            <div class="card-body">
+              <tabset class="nav-tabs-danger justify-content-center tab-subcategories">
+                <tab heading="Experiences">
+                  <div class="table-responsive">
+                    <table class="table tablesorter" id="plain-table">
+                      <thead class="text-danger">
+                        <tr>
+                          <th class="header">Duration</th>
+                          <th class="header">Description</th>
+                          <th class="header">Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2.5 Years</td>
+                          <td>Angular Developer</td>
+                          <td>Infotech</td>
+                        </tr>
+                        <tr>
+                          <td>3 Months</td>
+                          <td>Internship Trainee</td>
+                          <td>Infotech</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </tab>
+                <tab heading="Updates">
+                  <div class="table-responsive">
+                    <table class="table tablesorter" id="plain-table">
+                      <thead class="text-danger">
+                        <tr>
+                          <th class="header">Latest Work</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Angular 17...</td>
+                        </tr>
+                        <tr>
+                          <td>Node.js Crud Operations...</td>
+                        </tr>
+                        <tr>
+                          <td>Kendoo Library...</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </tab>
+              </tabset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ........................................................PROJECTS................................... -->
+  <div class="section">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-md-6" style="display:grid;place-items:end;">
+          <div>
+            <div class="row justify-content-between align-items-center place-item-end">
+              <carousel [showIndicators]="true">
+                <slide>
+                  <img alt="First slide" class="d-block imgH" src="assets/img/eAuction1.png" />
+                </slide>
+                <slide>
+                  <img alt="Second slide" class="d-block imgH" src="assets/img/eAuction2.png" />
+                </slide>
+                <slide>
+                  <img alt="Third slide" class="d-block imgH" src="assets/img/eAuction3.png" />
+                </slide>
+                <slide>
+                  <img alt="Third slide" class="d-block imgH" src="assets/img/eAuction4.png" />
+                </slide>
+                <slide>
+                  <img alt="First slide" class="d-block imgH" src="assets/img/portal1.png" />
+                </slide>
+                <slide>
+                  <img alt="First slide" class="d-block imgH" src="assets/img/portal2.png" />
+                </slide>
+                <slide>
+                  <img alt="First slide" class="d-block imgH" src="assets/img/portal3.png" />
+                </slide>
+                <slide>
+                  <img alt="First slide" class="d-block imgH" src="assets/img/portal4.png" />
+                </slide>
+
+              </carousel>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-5">
+          <h1 class="profile-title text-left">Projects</h1>
+          <h5 class="text-on-back">02</h5>
+          <p class="profile-description text-left">
+            An artist of considerable range, Ryan â the name taken by
+            Melbourne-raised, Brooklyn-based Nick Murphy â writes, performs and
+            records all of his own music, giving it a warm, intimate feel with a
+            solid groove structure. An artist of considerable range.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ........................................................ACHIEVEMENTS................................... -->
+  <section class="section -mt-4">
+    <section class="section">
+      <img class="path" src="assets/img/path4.png" />
+
+      <div class="container">
+        <div class="row row-grid justify-content-between">
+          <div class="col-md-6">
+            <div class="pl-md-5">
+
+              <h1 class="profile-title text-left">Achivements <br />
+                So far...</h1>
+              <h5 class="text-on-back">03</h5>
+              <p>
+                As an accomplished Angular developer, I have successfully delivered multiple projects to production,
+                showcasing my expertise in crafting robust and scalable web applications.
+              </p>
+              <br />
+              <p>
+                With a keen understanding of the Angular framework, I have consistently demonstrated the ability to
+                create dynamic, user-friendly interfaces that meet both client requirements and industry standards. My
+                track record of delivering high-quality solutions underscores my proficiency in Angular development,
+                making me a trusted professional in the field.
+              </p>
+              <br />
+
+
+            </div>
+          </div>
+          <div class="col-md-5 mt-lg-5">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 px-2 py-2">
+                <div class="card card-stats upper bg-default">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="tim-icons icon-coins text-white"> </i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-title">5</p>
+                          <p></p>
+                          <p class="card-category">Total Projects</p> <br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-sm-12 px-2 py-2">
+                <div class="card card-stats">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="tim-icons icon-gift-2 text-info"> </i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-title">2</p>
+                          <p></p>
+                          <p class="card-category">Successfully Delivered to Production</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 px-2 py-2">
+                <div class="card card-stats">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="tim-icons icon-trophy text-warning"> </i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-title">2</p>
+                          <p></p>
+                          <p class="card-category">Projects from scratch</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-12 px-2 py-2">
+                <div class="card card-stats">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                          <i class="tim-icons icon-credit-card text-success">
+                          </i>
+                        </div>
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <div class="numbers">
+                          <p class="card-title"> 2, 12, 13 & 16</p>
+                          <p></p>
+                          <p class="card-category">Angular Versions</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- .................................................Bars.................. -->
+  <section class="section -mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="mb-4">Self-Evaluation</h3>
+          <div class="progress-container progress-success">
+            <span class="progress-badge"> Angular </span>
+            <progressbar class="progress-bar-progress" [value]="95">
+              <span class="progress-value"> 95% </span>
+            </progressbar>
+          </div>
+          <div class="progress-container progress-warning">
+            <span class="progress-badge"> React </span>
+            <progressbar class="progress-bar-danger" [value]="30">
+              <span class="progress-value"> 30% </span>
+            </progressbar>
+          </div>
+          <div class="progress-container progress-info">
+            <span class="progress-badge">Express </span>
+            <progressbar class="progress-bar-danger" [value]="45">
+              <span class="progress-value"> 45% </span>
+            </progressbar>
+          </div>
+          <div class="progress-container progress-danger">
+            <span class="progress-badge"> Mongo-Db </span>
+            <progressbar class="progress-bar-danger" [value]="20">
+              <span class="progress-value"> 20% </span>
+            </progressbar>
+          </div>
+          <br />
+        </div>
+      </div>
+      <br />
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</div>
