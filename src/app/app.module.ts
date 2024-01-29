@@ -5,28 +5,32 @@ import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
-
-import { BsDropdownModule } from "ngx-bootstrap/dropdown";
-import { ProgressbarModule } from "ngx-bootstrap/progressbar";
-import { TooltipModule } from "ngx-bootstrap/tooltip";
-import { CollapseModule } from "ngx-bootstrap/collapse";
-import { TabsModule } from "ngx-bootstrap/tabs";
-import { PaginationModule } from "ngx-bootstrap/pagination";
-import { AlertModule } from "ngx-bootstrap/alert";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
-import { CarouselModule } from "ngx-bootstrap/carousel";
-import { ModalModule } from "ngx-bootstrap/modal";
 import { ComponentsModule } from "./components/components.module";
+import { NgxUiLoaderConfig, NgxUiLoaderModule, PB_DIRECTION, POSITION, SPINNER } from "ngx-ui-loader";
 
 
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  bgsColor: "black",
+  bgsPosition: "top-right",
+  bgsSize: 30,
+  bgsType: SPINNER.rectangleBounce, // background spinner type
+
+
+  fgsType: SPINNER.threeStrings, // foreground spinner type
+  fgsSize: 40,
+  fgsColor: "#cb405d",
+  fgsPosition:"center-center",
+
+  pbDirection: PB_DIRECTION.leftToRight, // progress bar direction
+  pbThickness: 2, // progress bar thickness
+  pbColor:"#cb405d",
+
+};
 
 @NgModule({
   declarations: [
-    AppComponent
-    // DashboardComponent,
-    // ProfilepageComponent,
-    // RegisterpageComponent,
-    // ProjectsComponent
+    AppComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -34,19 +38,13 @@ import { ComponentsModule } from "./components/components.module";
     HttpClientModule,
     RouterModule,
     AppRoutingModule,
-    // BsDropdownModule.forRoot(),
-    // ProgressbarModule.forRoot(),
-    // TooltipModule.forRoot(),
-    // CollapseModule.forRoot(),
-    // TabsModule.forRoot(),
-    ComponentsModule
-    // PaginationModule.forRoot(),
-    // AlertModule.forRoot(),
-    // BsDatepickerModule.forRoot(),
-    // CarouselModule.forRoot(),
-    // ModalModule.forRoot()
+    ComponentsModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+  ],
+  exports: [
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

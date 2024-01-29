@@ -1,19 +1,15 @@
 {
-  "name": "blk-design-system-angular",
-  "version": "1.2.0",
+  "name": "portfolio",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "description": "BLK Design System Angular: Free Angular Design System For Bootstrap 4 and Angular",
+    "description": "Usama Attique Portfolio",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/blk-design-system-angular.git"
   },
   "keywords": [
     "design system",
@@ -56,12 +52,8 @@
     "blk design system",
     "blk design system angular"
   ],
-  "author": "Creative Tim <hello@creative-tim.com> (https://www.creative-tim.com/)",
+  "author": "Usama Attique",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/blk-design-system-angular/issues"
-  },
-  "homepage": "https://demos.creative-tim.com/blk-design-system-angular/",
   "private": false,
   "dependencies": {
     "@angular/animations": "11.0.5",
@@ -79,6 +71,7 @@
     "jw-bootstrap-switch-ng2": "2.0.5",
     "ngx-bootstrap": "6.2.0",
     "ngx-extended-pdf-viewer": "^10.5.0",
+    "ngx-ui-loader": "^11.0.0",
     "nouislider": "14.6.3",
     "npm": "^10.4.0",
     "rxjs": "6.6.3",

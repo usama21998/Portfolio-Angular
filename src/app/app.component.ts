@@ -7,6 +7,7 @@ import {
 } from "@angular/core";
 import { Location } from "@angular/common";
 import { DOCUMENT } from "@angular/common";
+import { LoaderService } from "./loader.service";
 
 @Component({
   selector: "app-root",
@@ -17,8 +18,11 @@ export class AppComponent implements OnInit {
   constructor(
     private renderer: Renderer2,
     public location: Location,
-    @Inject(DOCUMENT) document
-  ) {}
+    @Inject(DOCUMENT) document,
+    private loader: LoaderService
+  ) {
+    this.loader.start();
+  }
   @HostListener("window:scroll", ["$event"])
   onWindowScroll(e) {
     if (window.pageYOffset > 100) {

@@ -20,10 +20,11 @@ import { PopoverModule } from "ngx-bootstrap/popover";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { ProfilepageComponent } from "./pages/profilepage/profilepage.component";
 import { ProjectsComponent } from "./pages/projects/projects.component";
-import { FooterComponent } from "./footer/footer.component";
 import { ResumeComponent } from "./pages/resume/resume.component";
 import { HttpClientModule } from "@angular/common/http";
 import { NgxExtendedPdfViewerModule } from "ngx-extended-pdf-viewer";
+import { NavBarComponent } from "./nav-bar/navbar.component";
+import { FooterComponent } from "./footer/footer.component";
 
 
 
@@ -53,7 +54,8 @@ import { NgxExtendedPdfViewerModule } from "ngx-extended-pdf-viewer";
     ProfilepageComponent,
     ProjectsComponent,
     FooterComponent,
-    ResumeComponent
+    ResumeComponent,
+    NavBarComponent
   ],
   exports: [
     DashboardComponent,
@@ -61,6 +63,7 @@ import { NgxExtendedPdfViewerModule } from "ngx-extended-pdf-viewer";
     ProjectsComponent,
     FooterComponent,
     ResumeComponent,
+    NavBarComponent
   ],
   providers: []
 })

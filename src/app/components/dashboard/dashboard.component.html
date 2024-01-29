@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="100" id="navbar-top">
   <div class="container">
+    
     <div class="navbar-translate">
       <a class="navbar-brand" placement="bottom" [routerLink]="['/home']" target="_blank">
         <span> PORTFOLIO </span><span style="display:flex; font-size: 10px;">Made By Usama Attique</span>
@@ -54,29 +55,30 @@
           </a>
           <div class="dropdown-menu dropdown-with-icons" *dropdownMenu>
             <!-- <a class="dropdown-item" [routerLink]="['/profile']">
-              <img alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" src="assets/img/usama.png" />
+            <img alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" src="assets/img/usama.png" />
 
-            </a> -->
+          </a> -->
             <a class="dropdown-item" [routerLink]="['/profile']">
               <i class="tim-icons icon-badge"> </i> Profile
             </a>
             <a class="dropdown-item" [routerLink]="['/project']">
               <i class="tim-icons icon-image-02"> </i> Projects
             </a>
-            <!-- <a class="dropdown-item" [routerLink]="['/resume']">
-              <i class="tim-icons icon-book-bookmark"> </i> Resume
-            </a> -->
+            <a class="dropdown-item" [routerLink]="['/resume']">
+            <i class="tim-icons icon-book-bookmark"> </i> Resume
+          </a>
 
           </div>
         </li>
         <li class="nav-item">
           <a class="nav-link btn btn-default d-none d-lg-block" href="javascript:void(0)"
-            (click)="scrollToDownload(target)">
+            (click)="onClickDownload()">
             <i class="tim-icons icon-cloud-download-93"> </i> CV
           </a>
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
 
@@ -92,9 +94,9 @@
     <div class="squares square7"></div>
     <div class="container">
       <div class="content-center brand">
-        <h1 class="h1-seo" style="font-size:4em;">USAMA ATTIQUE</h1>
+        <!-- <h1 class="h1-seo" style="font-size:2em;">USAMA ATTIQUE</h1> -->
         <h2>
-          A Software Engineer proficient in creating dynamic, responsive web applications using the Angular framework.
+          Myself <b>Usama Attique</b>, A Software Engineer proficient in creating dynamic, responsive web applications using the Angular framework.
         </h2>
       </div>
     </div>

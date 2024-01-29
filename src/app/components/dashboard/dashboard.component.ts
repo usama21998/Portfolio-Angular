@@ -1,23 +1,31 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnDestroy, AfterViewInit } from "@angular/core";
+import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
+import { NgxUiLoaderService } from "ngx-ui-loader";
 import noUiSlider from "nouislider";
+import { AppConstants } from "src/app/app.constants";
+import { LoaderService } from "src/app/loader.service";
+import { filter } from 'rxjs/operators';
+import { DownloadPdfService } from "src/app/download.pdf.service";
+const pdfSrc = AppConstants.PDF_SRC;
 
 @Component({
   selector: "app-index",
   templateUrl: "dashboard.component.html"
 })
-export class DashboardComponent implements OnInit, OnDestroy {
-  isCollapsed = false;
+export class DashboardComponent implements OnInit, OnDestroy, AfterViewInit {
+  isCollapsed = true
   focus;
   focus1;
   focus2;
   date = new Date();
   pagination = 3;
   pagination1 = 1;
-  constructor() {}
-  scrollToDownload(element: any) {
-    element.scrollIntoView({ behavior: "smooth" });
+  constructor(private loader: LoaderService, private router: Router, private activatedRoute: ActivatedRoute, private pdfSrc: DownloadPdfService) {
+    this.loader.start();
   }
+
   ngOnInit() {
+
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("index-page");
 
@@ -42,9 +50,25 @@ export class DashboardComponent implements OnInit, OnDestroy {
         max: 100
       }
     });
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      window.scrollTo(0, 0);
+    });
   }
+
+  ngAfterViewInit(): void {
+    this.loader.stop();
+  }
+
+  onClickDownload() {
+    this.pdfSrc.downloadPdf(pdfSrc)
+  }
+
   ngOnDestroy() {
     var body = document.getElementsByTagName("body")[0];
     body.classList.remove("index-page");
+
   }
 }
