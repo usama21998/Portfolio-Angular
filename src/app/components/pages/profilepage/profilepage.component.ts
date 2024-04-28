@@ -12,7 +12,10 @@ export class ProfilepageComponent implements OnInit, OnDestroy, AfterViewInit {
     this.loader.start();
   }
 
+  currentEmployment = "";
+
   ngOnInit() {
+    this.getCurrentEmploymentMonths();
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("profile-page");
 
@@ -30,5 +33,39 @@ export class ProfilepageComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnDestroy() {
     var body = document.getElementsByTagName("body")[0];
     body.classList.remove("profile-page");
+  }
+
+  getCurrentEmploymentMonths() {
+    var startDate = "2024-03-04"; // Format: YYYY-MM-DD
+    var endDate: any = new Date();
+    endDate = this.formatDate(endDate);// Format: YYYY-MM-DD
+    let months = this.findCurrentEmploumentMonths(startDate, endDate);
+    let stringMonth = '';
+    if (months > 1) {
+      stringMonth = "Months"
+    }
+    else
+      stringMonth = "Month"
+
+    this.currentEmployment = `${months} ${stringMonth}`
+  }
+
+
+  findCurrentEmploumentMonths(startDate, endDate) {
+    startDate = new Date(startDate);
+    endDate = new Date(endDate);
+    var timeDifference = endDate.getTime() - startDate.getTime();
+    var monthsDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30.4375)); // Approximate number of days in a month
+    return monthsDifference;
+  }
+
+  formatDate(date) {
+    var year = date.getFullYear();
+
+    // Add leading zero if month or day is single digit
+    var month = (date.getMonth() + 1).toString().padStart(2, '0');
+    var day = date.getDate().toString().padStart(2, '0');
+
+    return year + '-' + month + '-' + day;
   }
 }
