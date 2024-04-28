@@ -1,0 +1,13 @@
+ 
+1-make a build inside dist folder
+
+2-select node version between 18 and 20
+
+3-if firebase is not installed in your system
+  npm install -g firebase-tools
+
+4-firebase login 
+
+5-firebase init  
+
+6-firebase deploy --only hosting -p dist
