@@ -81,6 +81,24 @@
     }
   }
 
+  &.progress-1 {
+    .progress-bar {
+      @include diagonal-gradient($success-states_1, $success);
+    }
+  }
+
+  &.progress-2 {
+    .progress-bar {
+      @include diagonal-gradient($success-states_2, $success);
+    }
+  }
+
+  &.progress-3 {
+    .progress-bar {
+      @include diagonal-gradient($success-states_3, $success);
+    }
+  }
+
   &.progress-warning {
     .progress-bar {
       @include diagonal-gradient($warning-states, $warning);

@@ -41,13 +41,36 @@ export class ProfilepageComponent implements OnInit, OnDestroy, AfterViewInit {
     endDate = this.formatDate(endDate);// Format: YYYY-MM-DD
     let months = this.findCurrentEmploumentMonths(startDate, endDate);
     let stringMonth = '';
+    let stringYear = '';
+
+    months = months + 3;
     if (months > 1) {
       stringMonth = "Months"
     }
     else
       stringMonth = "Month"
 
-    this.currentEmployment = `${months} ${stringMonth}`
+
+    const years = Math.floor(months / 12);
+    months = months % 12;
+
+    if (years > 1) {
+      stringYear = "Years"
+    }
+    else
+      stringYear = "Year"
+
+    if (years == 0) {
+      this.currentEmployment = `${months} ${stringMonth}`
+    }
+    else {
+      if (months == 0) {
+        this.currentEmployment = `${years} ${stringYear}`
+      }
+      else {
+        this.currentEmployment = `${years}.${months} Years`
+      }
+    }
   }
 
 
