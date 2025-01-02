@@ -1,13 +1,15 @@
  
-1-make a build inside dist folder
+1-make a build--prod inside dist folder  "from node "14.17.3" "
 
 2-select node version between 18 and 20
 
-3-if firebase is not installed in your system
+3-if firebase is not installed in your system      "from node "18.19.1""
   npm install -g firebase-tools
 
 4-firebase login 
 
-5-firebase init  
+5-firebase init  ->hosting-> type "dist" for public directory 
 
-6-firebase deploy --only hosting -p dist
+NOTE: dont overwrite index.html file as firebase will rewrite it to its own statting page
+
+6-firebase deploy
