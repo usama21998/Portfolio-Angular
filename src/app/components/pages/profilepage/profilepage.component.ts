@@ -13,9 +13,13 @@ export class ProfilepageComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   currentEmployment = "";
+  infotechExperince = "2.5 Years";
+  infotechInternship = "3 Months";
+  totalExperience = "";
 
   ngOnInit() {
     this.getCurrentEmploymentMonths();
+    this.totalExperience = this.getTotalExperience();
     var body = document.getElementsByTagName("body")[0];
     body.classList.add("profile-page");
 
@@ -73,6 +77,35 @@ export class ProfilepageComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
+  getTotalExperience() {
+    const parseExperience = (str) => {
+      if (!str) return 0;
+      if (str.toLowerCase().includes("months") || str.toLowerCase().includes("month")) {
+        const months = parseFloat(str.match(/[\d.]+/)[0]);
+        return months;
+      }
+      if (str.toLowerCase().includes("years") || str.toLowerCase().includes("year")) {
+        const res: any = parseFloat(str.match(/[\d.]+/)[0]);
+        if (res.toString().includes(".")) {
+          let [year, month] = res.toString().split(".");
+          const totalMonths = (Number(year) * 12) + Number(month);
+          return totalMonths;
+        }
+        else {
+          return res * 12;
+        }
+      }
+    };
+
+    let total =
+      parseExperience(this.infotechExperince) +
+      parseExperience(this.infotechInternship) +
+      parseExperience(this.currentEmployment);
+
+    const years = Math.floor(total / 12);
+    const months = total % 12 / 10;
+    return years + months + " Years";
+  }
 
   findCurrentEmploumentMonths(startDate, endDate) {
     startDate = new Date(startDate);
