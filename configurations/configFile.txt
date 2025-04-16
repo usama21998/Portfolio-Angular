@@ -1,4 +1,0 @@
-Angular 11.0.5
-node.js version : 14.17.3
-
-use npm install --force to install nodeModules

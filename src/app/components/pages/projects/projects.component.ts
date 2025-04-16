@@ -1,7 +1,5 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from "@angular/core";
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
-import Chart from "chart.js";
-import { AppConstants } from "src/app/app.constants";
 import { LoaderService } from "src/app/loader.service";
 import { filter } from 'rxjs/operators';
 @Component({
