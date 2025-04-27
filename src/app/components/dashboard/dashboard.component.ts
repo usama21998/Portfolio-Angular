@@ -20,6 +20,10 @@ export class DashboardComponent implements OnInit, OnDestroy, AfterViewInit {
   date = new Date();
   pagination = 3;
   pagination1 = 1;
+  email: string = AppConstants.EMAIL;
+  youtube: string = AppConstants.YOUTUBE;
+  linkedIn: string = AppConstants.LINKEDIN;
+
   constructor(private loader: LoaderService, private router: Router, private activatedRoute: ActivatedRoute, private pdfSrc: DownloadPdfService) {
     this.loader.start();
   }
