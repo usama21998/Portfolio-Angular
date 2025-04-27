@@ -2,11 +2,16 @@ import { Component, OnInit, OnDestroy, AfterViewInit } from "@angular/core";
 import { ActivatedRoute, NavigationEnd, Router } from "@angular/router";
 import { LoaderService } from "src/app/loader.service";
 import { filter } from 'rxjs/operators';
+import { AppConstants } from "src/app/app.constants";
 @Component({
   selector: "app-profilepage",
   templateUrl: "profilepage.component.html"
 })
 export class ProfilepageComponent implements OnInit, OnDestroy, AfterViewInit {
+
+  email: string = AppConstants.EMAIL;
+  youtube: string = AppConstants.YOUTUBE;
+  linkedIn: string = AppConstants.LINKEDIN;
 
   constructor(private loader: LoaderService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.loader.start();

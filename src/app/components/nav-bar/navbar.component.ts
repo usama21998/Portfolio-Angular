@@ -8,6 +8,9 @@ import { AppConstants } from "src/app/app.constants";
 })
 export class NavBarComponent implements OnInit, OnDestroy {
   isCollapsed = AppConstants.isCollapsed;
+  email: string = AppConstants.EMAIL;
+  youtube: string = AppConstants.YOUTUBE;
+  linkedIn: string = AppConstants.LINKEDIN;
   constructor() { }
 
   ngOnInit() {
